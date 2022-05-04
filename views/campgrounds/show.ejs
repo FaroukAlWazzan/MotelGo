@@ -38,8 +38,7 @@
             <% if(currentUser && campgro.author.equals(currentUser._id)) { %>
             <div class="card-body">
                 <a href="/campgrounds/<%= campgro._id %>/edit" class="card-link btn btn-info">Edit</a>
-                <form action="/campgrounds/<%= campgro._id %>?_method=DELETE" method="POST"
-                    class="card-link btn btn-warning bg-white d-inline">
+                <form action="/campgrounds/<%= campgro._id %>?_method=DELETE" method="POST" class="d-inline">
                     <button class="btn btn-warning">Delete</button>
                 </form>
             </div>
@@ -48,7 +47,7 @@
                 2 days ago
             </div>
         </div>
-        <footer class="mb-3"><a href="/campgrounds">All Campgrounds</a></footer>
+        <footer class="mb-3"><a href="/campgrounds" class="btn btn-light">&laquo; All Hostels</a></footer>
     </div>
     <div class="col-6">
         <% if(currentUser) { %>

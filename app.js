@@ -139,7 +139,7 @@ app.use((err, req, res, next) => {
     res.status(statusCode).render('errorMsg', { err });
 })
 
-const port = process.env.PORT || 3000;
+const port = 3000 || process.env.DB_URL;
 app.listen(port, () => {
     console.log(`LISTENING ON PORT ${port}`);
 })
