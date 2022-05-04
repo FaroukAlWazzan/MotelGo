@@ -2,12 +2,6 @@ if (process.env.NODE_ENV !== 'production') {
     require('dotenv').config()
 }
 
-// mongodb+srv://our-first-user:<password>@cluster0.uwiaf.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
-
-
-// console.log(process.env.cloudinary_cloud_name);
-// console.log(process.env.cloudinary_cloud_key);
-
 const express = require('express');
 const path = require('path');
 const app = express();
@@ -139,7 +133,7 @@ app.use((err, req, res, next) => {
     res.status(statusCode).render('errorMsg', { err });
 })
 
-const port = 3000 || process.env.DB_URL;
+const port = process.env.DB_URL;
 app.listen(port, () => {
     console.log(`LISTENING ON PORT ${port}`);
 })
