@@ -133,7 +133,7 @@ app.use((err, req, res, next) => {
     res.status(statusCode).render('errorMsg', { err });
 })
 
-const port = process.env.DB_URL;
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log(`LISTENING ON PORT ${port}`);
 })
