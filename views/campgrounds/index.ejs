@@ -1,5 +1,5 @@
 <% layout('../layouts/boilerplate') %>
-<h1>All Campgrounds</h1>
+<h1>All Hostels</h1>
 <div><a href="/campgrounds/new">Add new one:</a></div>
 <% for (let campground of campgrounds) { %>
 <div class="card mb-3">
@@ -11,7 +11,7 @@
             <img src="https://res.cloudinary.com/di0oxwj2l/image/upload/v1651422192/MotelGo/ewiumlnevtk49exhd6ji.jpg"
                 class="img-fluid rounded-start" alt="...">
             <% } %>
-        </div>  
+        </div>
         <div class="col-md-8">
             <div class="card-body">
                 <h5 class="card-title"><%=  campground.title  %></h5>
