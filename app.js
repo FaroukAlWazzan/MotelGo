@@ -113,11 +113,6 @@ app.get('/fakeuser', async (req, res) => {
     res.send(newUser);
 })
 
-// app.get('/makecampground', async (req, res) => {
-//     const camp = new Campground({ title: 'My Backyard', description: 'Cheap camping for everyone' })
-//     await camp.save();
-//     res.send(camp)
-// })
 
 
 app.all('*', (req, res, next) => {
